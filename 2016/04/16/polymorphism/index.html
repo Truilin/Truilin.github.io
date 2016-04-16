@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="Truilin Blog">
 <meta property="og:description" content="最近看多态时，发现C++和Java的多态很多相同之处也有一些区别，就总结了一下。
 多态作为面向对象的三大特性（封装、继承）之一，顾名思义，让程序运行时有多个状态可以运行，函数的调用是在调用时才确定而不是编译器确定的。常用的写法是声明一个父类，实际引用的是子类对象，再调用子类中重写（方法名参数均一致）了的父类的方法。java和C++在这里对于重写了的方法就有一个区别，C++要求是必须重写虚函数才可以">
-<meta property="og:updated_time" content="2016-04-16T02:36:16.404Z">
+<meta property="og:updated_time" content="2016-04-16T03:00:33.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多态C++与Java">
 <meta name="twitter:description" content="最近看多态时，发现C++和Java的多态很多相同之处也有一些区别，就总结了一下。
@@ -284,7 +284,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-16T10:36:16+08:00" content="2016-04-16">
+            <time itemprop="dateCreated" datetime="2016-04-16T11:00:33+08:00" content="2016-04-16">
               2016-04-16
             </time>
           </span>
@@ -397,59 +397,62 @@
 <table>
 <thead>
 <tr>
-<th>参数</th>
+<th style="text-align:center">参数</th>
 <th style="text-align:center">抽象类</th>
 <th style="text-align:center">接口</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>默认的方法实现</td>
+<td style="text-align:center">默认的方法实现</td>
 <td style="text-align:center">它可以有默认的方法实现</td>
 <td style="text-align:center">接口完全是抽象的。它根本不存在方法的实现</td>
 </tr>
 <tr>
-<td>实现</td>
+<td style="text-align:center">实现</td>
 <td style="text-align:center">子类使用extends关键字来继承抽象类。如果子类不是抽象类的话，它需要提供抽象类中所有声明的方法的实现。</td>
 <td style="text-align:center">子类使用关键字implements来实现接口。它需要提供接口中所有声明的方法的实现</td>
 </tr>
 <tr>
-<td>构造器</td>
+<td style="text-align:center">构造器</td>
 <td style="text-align:center">抽象类可以有构造器</td>
 <td style="text-align:center">接口不能有构造器</td>
 </tr>
 <tr>
-<td>与正常Java类的区别</td>
+<td style="text-align:center">与正常Java类的区别</td>
 <td style="text-align:center">除了你不能实例化抽象类之外，它和普通Java类没有任何区别</td>
 <td style="text-align:center">接口是完全不同的类型</td>
 </tr>
 <tr>
-<td>访问修饰符</td>
-<td style="text-align:center">抽象方法可以有public、protected和default这些修饰符    接口方法默认修饰符是public。你不可以使用其它修饰符。</td>
+<td style="text-align:center">访问修饰符</td>
+<td style="text-align:center">抽象方法可以有public、protected和default这些修饰符</td>
+<td style="text-align:center">接口方法默认修饰符是public。你不可以使用其它修饰符。</td>
 </tr>
 <tr>
-<td>main方法</td>
+<td style="text-align:center">main方法</td>
 <td style="text-align:center">抽象方法可以有main方法并且我们可以运行它</td>
 <td style="text-align:center">接口没有main方法，因此我们不能运行它。</td>
 </tr>
 <tr>
-<td>多继承</td>
+<td style="text-align:center">多继承</td>
 <td style="text-align:center">抽象方法可以继承一个类和实现多个接口</td>
 <td style="text-align:center">接口只可以继承一个或多个其它接口</td>
 </tr>
 <tr>
-<td>速度</td>
+<td style="text-align:center">速度</td>
 <td style="text-align:center">它比接口速度要快</td>
 <td style="text-align:center">接口是稍微有点慢的，因为它需要时间去寻找在类中实现的方法。</td>
 </tr>
 <tr>
-<td>添加新方法</td>
+<td style="text-align:center">添加新方法</td>
 <td style="text-align:center">如果你往抽象类中添加新的方法，你可以给它提供默认的实现。因此你不需要改变你现在的代码。</td>
 <td style="text-align:center">如果你往接口中添加方法，那么你必须改变实现该接口的类。</td>
 </tr>
 </tbody>
 </table>
-<p>C++ 则有虚函数和纯虚函数，其中虚函数，加上关键词virtual，纯虚函数则是函数原型后加上“=0”如virtual ReturnType Function()= 0;包含纯虚函数的类是抽象类，不可以实现的，这里就和java很类似了。</p>
+<p>C++ 则有虚函数和纯虚函数，其中虚函数，加上关键词virtual，纯虚函数则是函数原型后加上“=0”如virtual ReturnType Function()= 0;包含纯虚函数的类是抽象类（也就是C++中的接口），不可以实现的。</p>
+<p>Java抽象类和接口还有一个区别是设计层面，抽象类是自底向上，将几个类的共性抽象出来，如男人、女人、老人、小孩可以抽象出一个类：人；接口是自顶向下的，包含的是抽象的方法，实现该接口的类不一定是同一个类型，比如对于运动了一段路程，人可以是走了一段路程，动物可以是爬了一段路程，飞行器可以使飞行了一段路程，这里就可以把这个方法作为一个接口里的方法。</p>
+<p>虚函数表<br>虚函数（Virtual Function）是通过一张虚函数表（Virtual Table）来实现的。简称为V-Table。在这个表中，主是要一个类的虚函数的地址表，这张表解决了继承、覆盖的问题，保证其容真实反应实际的函数。对于一个类的实例，如果他继承（单继承）的时候，没有虚函数覆盖（重写override），那么它的虚函数表里的顺序是父类的虚函数在前，再跟着自己的虚函数；如果继承的时候虚函数覆盖了，那么覆盖了的虚函数在被覆盖的父类虚函数之前，其余的顺序依旧。对于多继承无覆盖，那么每个父类都有自己的虚函数表，子类的虚函数在第一个父函数虚函数表后；若是有覆盖，覆盖了的虚函数就在对应的父虚函数表之后，没有覆盖的虚函数依然在第一个父类虚函数表的最后</p>
 
       
     </div>
