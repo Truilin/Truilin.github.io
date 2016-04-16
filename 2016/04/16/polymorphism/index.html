@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="Truilin Blog">
 <meta property="og:description" content="最近看多态时，发现C++和Java的多态很多相同之处也有一些区别，就总结了一下。
 多态作为面向对象的三大特性（封装、继承）之一，顾名思义，让程序运行时有多个状态可以运行，函数的调用是在调用时才确定而不是编译器确定的。常用的写法是声明一个父类，实际引用的是子类对象，再调用子类中重写（方法名参数均一致）了的父类的方法。java和C++在这里对于重写了的方法就有一个区别，C++要求是必须重写虚函数才可以">
-<meta property="og:updated_time" content="2016-04-16T02:26:23.447Z">
+<meta property="og:updated_time" content="2016-04-16T02:29:50.591Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多态C++与Java">
 <meta name="twitter:description" content="最近看多态时，发现C++和Java的多态很多相同之处也有一些区别，就总结了一下。
@@ -284,7 +284,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-16T10:26:23+08:00" content="2016-04-16">
+            <time itemprop="dateCreated" datetime="2016-04-16T10:29:50+08:00" content="2016-04-16">
               2016-04-16
             </time>
           </span>
@@ -393,7 +393,7 @@
     pd-&gt;h(<span class="number">3.14f</span>);   <span class="comment">// Derived::h(float) 3.14</span>
     <span class="keyword">return</span> <span class="number">0</span>;
 }
-</code></pre><p>Java中实现多态可以有继承和接口两种实现方式。继承可以继承普通类和抽象类，接口则是全部为抽象的方法，区别如下：<br>| Tables        | Are           | Cool  |<br>| ————- |:————-:| —–:|<br>| col 3 is      | right-aligned | $1600 |<br>| col 2 is      | centered      |   $12 |<br>| zebra stripes | are neat      |    $1 |</p>
+</code></pre><p>Java中实现多态可以有继承和接口两种实现方式。继承可以继承普通类和抽象类，接口则是全部为抽象的方法，区别如下：</p>
 <table>
 <thead>
 <tr>
@@ -409,9 +409,19 @@
 <td style="text-align:right">接口完全是抽象的。它根本不存在方法的实现</td>
 </tr>
 <tr>
+<td>————-</td>
+<td style="text-align:center">:————-:</td>
+<td style="text-align:right">—–:</td>
+</tr>
+<tr>
 <td>实现</td>
 <td style="text-align:center">子类使用extends关键字来继承抽象类。如果子类不是抽象类的话，它需要提供抽象类中所有声明的方法的实现。</td>
 <td style="text-align:right">子类使用关键字implements来实现接口。它需要提供接口中所有声明的方法的实现</td>
+</tr>
+<tr>
+<td>————-</td>
+<td style="text-align:center">:————-:</td>
+<td style="text-align:right">—–:</td>
 </tr>
 <tr>
 <td>构造器</td>
@@ -419,13 +429,28 @@
 <td style="text-align:right">接口不能有构造器</td>
 </tr>
 <tr>
+<td>————-</td>
+<td style="text-align:center">:————-:</td>
+<td style="text-align:right">—–:</td>
+</tr>
+<tr>
 <td>与正常Java类的区别</td>
 <td style="text-align:center">除了你不能实例化抽象类之外，它和普通Java类没有任何区别</td>
 <td style="text-align:right">接口是完全不同的类型</td>
 </tr>
 <tr>
+<td>————-</td>
+<td style="text-align:center">:————-:</td>
+<td style="text-align:right">—–:</td>
+</tr>
+<tr>
 <td>访问修饰符</td>
 <td style="text-align:center">抽象方法可以有public、protected和default这些修饰符    接口方法默认修饰符是public。你不可以使用其它修饰符。</td>
+</tr>
+<tr>
+<td>————-</td>
+<td style="text-align:center">:————-:</td>
+<td style="text-align:right">—–:</td>
 </tr>
 <tr>
 <td>main方法</td>
@@ -433,9 +458,19 @@
 <td style="text-align:right">接口没有main方法，因此我们不能运行它。</td>
 </tr>
 <tr>
+<td>————-</td>
+<td style="text-align:center">:————-:</td>
+<td style="text-align:right">—–:</td>
+</tr>
+<tr>
 <td>多继承</td>
 <td style="text-align:center">抽象方法可以继承一个类和实现多个接口</td>
 <td style="text-align:right">接口只可以继承一个或多个其它接口</td>
+</tr>
+<tr>
+<td>————-</td>
+<td style="text-align:center">:————-:</td>
+<td style="text-align:right">—–:</td>
 </tr>
 <tr>
 <td>速度</td>
@@ -443,9 +478,19 @@
 <td style="text-align:right">接口是稍微有点慢的，因为它需要时间去寻找在类中实现的方法。</td>
 </tr>
 <tr>
+<td>————-</td>
+<td style="text-align:center">:————-:</td>
+<td style="text-align:right">—–:</td>
+</tr>
+<tr>
 <td>添加新方法</td>
 <td style="text-align:center">如果你往抽象类中添加新的方法，你可以给它提供默认的实现。因此你不需要改变你现在的代码。</td>
 <td style="text-align:right">如果你往接口中添加方法，那么你必须改变实现该接口的类。</td>
+</tr>
+<tr>
+<td>————-</td>
+<td style="text-align:center">:————-:</td>
+<td style="text-align:right">—–:</td>
 </tr>
 </tbody>
 </table>
