@@ -57,19 +57,16 @@
 
 
 
-<meta name="description" content="第三章 线性回归3.1 试分析什么情形下式（3.2）中不必考虑偏置项b$$f(x)=w^Tx+b$$我们选择参数w来拟合模型，通常使用最小二乘法，来求最小残差和（均方误差、平均损失）时的参数，这时会引进参数b，来求最小值。体现在空间上则是点和拟合曲线之间的浮动，如果所有点和拟合曲线完全拟合的话，这时b等于0，不需要考虑引进了。b对应的x恒等于1，如果是特征选择，这个时候是不用考虑b的。
-3.2 试">
+<meta name="description" content="第三章 线性回归3.1 试分析什么情形下式（3.2）中不必考虑偏置项b$$f(x)=w^Tx+b$$\begin{equation}f(x)=w^Tx+b \text{    3.2}\label{eq:3.2}\end{equation}我们选择参数w来拟合模型，通常使用最小二乘法，来求最小残差和（均方误差、平均损失）时的参数，这时会引进参数b，来求最小值。体现在空间上则是点和拟合曲线之间的浮动">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习课后题">
 <meta property="og:url" content="http://truilin.com/2016/04/23/机器学习-周志华/index.html">
 <meta property="og:site_name" content="Truilin Blog">
-<meta property="og:description" content="第三章 线性回归3.1 试分析什么情形下式（3.2）中不必考虑偏置项b$$f(x)=w^Tx+b$$我们选择参数w来拟合模型，通常使用最小二乘法，来求最小残差和（均方误差、平均损失）时的参数，这时会引进参数b，来求最小值。体现在空间上则是点和拟合曲线之间的浮动，如果所有点和拟合曲线完全拟合的话，这时b等于0，不需要考虑引进了。b对应的x恒等于1，如果是特征选择，这个时候是不用考虑b的。
-3.2 试">
-<meta property="og:updated_time" content="2016-04-23T02:09:53.524Z">
+<meta property="og:description" content="第三章 线性回归3.1 试分析什么情形下式（3.2）中不必考虑偏置项b$$f(x)=w^Tx+b$$\begin{equation}f(x)=w^Tx+b \text{    3.2}\label{eq:3.2}\end{equation}我们选择参数w来拟合模型，通常使用最小二乘法，来求最小残差和（均方误差、平均损失）时的参数，这时会引进参数b，来求最小值。体现在空间上则是点和拟合曲线之间的浮动">
+<meta property="og:updated_time" content="2016-04-23T02:14:16.602Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习课后题">
-<meta name="twitter:description" content="第三章 线性回归3.1 试分析什么情形下式（3.2）中不必考虑偏置项b$$f(x)=w^Tx+b$$我们选择参数w来拟合模型，通常使用最小二乘法，来求最小残差和（均方误差、平均损失）时的参数，这时会引进参数b，来求最小值。体现在空间上则是点和拟合曲线之间的浮动，如果所有点和拟合曲线完全拟合的话，这时b等于0，不需要考虑引进了。b对应的x恒等于1，如果是特征选择，这个时候是不用考虑b的。
-3.2 试">
+<meta name="twitter:description" content="第三章 线性回归3.1 试分析什么情形下式（3.2）中不必考虑偏置项b$$f(x)=w^Tx+b$$\begin{equation}f(x)=w^Tx+b \text{    3.2}\label{eq:3.2}\end{equation}我们选择参数w来拟合模型，通常使用最小二乘法，来求最小残差和（均方误差、平均损失）时的参数，这时会引进参数b，来求最小值。体现在空间上则是点和拟合曲线之间的浮动">
 
 
 
@@ -284,7 +281,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-23T10:09:53+08:00" content="2016-04-23">
+            <time itemprop="dateCreated" datetime="2016-04-23T10:14:16+08:00" content="2016-04-23">
               2016-04-23
             </time>
           </span>
@@ -327,10 +324,10 @@
 
       
         <hr>
-<h2 id="第三章_线性回归">第三章 线性回归</h2><p>3.1 试分析什么情形下式（3.2）中不必考虑偏置项b<br>$$f(x)=w^Tx+b$$<br>我们选择参数w来拟合模型，通常使用最小二乘法，来求最小残差和（均方误差、平均损失）时的参数，这时会引进参数b，来求最小值。体现在空间上则是点和拟合曲线之间的浮动，如果所有点和拟合曲线完全拟合的话，这时b等于0，不需要考虑引进了。<br>b对应的x恒等于1，如果是特征选择，这个时候是不用考虑b的。</p>
-<p>3.2 试证明，对于参数w，对率回归的目标函数\eqref{eq:3.18}是非凸的，但其对数似然函数\eqref{eq:3.27}是凸的</p>
-<p>\begin{equation}<br>y=\frac{1}{1+e^{-(w^T+b)}} \text{    3.18}<br>\label{eq:3.18}<br>\end{equation}</p>
-<p>\begin{equation}<br>l(\beta)=\sum_{i=1}^{m}\left(-y_i{\beta}^{T}\hat{x_i}+ln\left(1+e^{\beta^Tx_i}\right)\right) \text{    3.27}<br>\label{eq:3.27}<br>\end{equation}</p>
+<h2 id="第三章_线性回归">第三章 线性回归</h2><p>3.1 试分析什么情形下式（3.2）中不必考虑偏置项b<br>$$f(x)=w^Tx+b$$<br>\begin{equation}<br>f(x)=w^Tx+b \text{    3.2}<br>\label{eq:3.2}<br>\end{equation}<br>我们选择参数w来拟合模型，通常使用最小二乘法，来求最小残差和（均方误差、平均损失）时的参数，这时会引进参数b，来求最小值。体现在空间上则是点和拟合曲线之间的浮动，如果所有点和拟合曲线完全拟合的话，这时b等于0，不需要考虑引进了。<br>b对应的x恒等于1，如果是特征选择，这个时候是不用考虑b的。</p>
+<p>3.2 试证明，对于参数w，对率回归的目标函数（3.18）是非凸的，但其对数似然函数（3.27）是凸的</p>
+<p>\begin{equation}<br>y=\frac{1}{1+e^{-(w^T+b)}} \text{    （3.18）}<br>\label{eq:3.18}<br>\end{equation}</p>
+<p>\begin{equation}<br>l(\beta)=\sum_{i=1}^{m}\left(-y_i{\beta}^{T}\hat{x_i}+ln\left(1+e^{\beta^Tx_i}\right)\right) \text{    （3.27）}<br>\label{eq:3.27}<br>\end{equation}</p>
 
       
     </div>
