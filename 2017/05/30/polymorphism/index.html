@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=5.0.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="photography," />
+  <meta name="keywords" content="Algorithm," />
 
 
 
@@ -57,17 +57,19 @@
 
 
 
-<meta name="description">
+<meta name="description" content="最近看多态时，发现C++和Java的多态很多相同之处也有一些区别，就总结了一下。
+多态作为面向对象的三大特性（封装、继承）之一，顾名思义，让程序运行时有多个状态可以运行，函数的调用是在调用时才确定而不是编译器确定的。常用的写法是声明一个父类，实际引用的是子类对象，再调用子类中重写（方法名参数均一致）了的父类的方法。java和C++在这里对于重写了的方法就有一个区别，C++要求是必须重写虚函数才可以">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My blog">
-<meta property="og:url" content="http://truilin.com/2015/10/31/hello-world/index.html">
+<meta property="og:title" content="多态C++与Java">
+<meta property="og:url" content="http://truilin.com/2017/05/30/polymorphism/index.html">
 <meta property="og:site_name" content="Truilin Blog">
-<meta property="og:description">
-<meta property="og:image" content="http://truilin.com/uploads/5.jpg">
-<meta property="og:updated_time" content="2015-10-31T13:33:57.433Z">
+<meta property="og:description" content="最近看多态时，发现C++和Java的多态很多相同之处也有一些区别，就总结了一下。
+多态作为面向对象的三大特性（封装、继承）之一，顾名思义，让程序运行时有多个状态可以运行，函数的调用是在调用时才确定而不是编译器确定的。常用的写法是声明一个父类，实际引用的是子类对象，再调用子类中重写（方法名参数均一致）了的父类的方法。java和C++在这里对于重写了的方法就有一个区别，C++要求是必须重写虚函数才可以">
+<meta property="og:updated_time" content="2016-04-16T03:05:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="多态C++与Java">
+<meta name="twitter:description" content="最近看多态时，发现C++和Java的多态很多相同之处也有一些区别，就总结了一下。
+多态作为面向对象的三大特性（封装、继承）之一，顾名思义，让程序运行时有多个状态可以运行，函数的调用是在调用时才确定而不是编译器确定的。常用的写法是声明一个父类，实际引用的是子类对象，再调用子类中重写（方法名参数均一致）了的父类的方法。java和C++在这里对于重写了的方法就有一个区别，C++要求是必须重写虚函数才可以">
 
 
 
@@ -85,7 +87,7 @@
   };
 </script>
 
-  <title> My blog | Truilin Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 多态C++与Java | Truilin Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,7 +272,7 @@
             
             
               
-                My blog
+                多态C++与Java
               
             
           </h1>
@@ -282,8 +284,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-10-31T21:33:57+08:00" content="2015-10-31">
-              2015-10-31
+            <time itemprop="dateCreated" datetime="2017-05-30T17:56:36+08:00" content="2017-05-30">
+              2017-05-30
             </time>
           </span>
 
@@ -293,8 +295,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/10/31/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/31/hello-world/" itemprop="commentsCount"></span>
+                <a href="/2017/05/30/polymorphism/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/30/polymorphism/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -304,7 +306,7 @@
 
           
           
-             <span id="/2015/10/31/hello-world/" class="leancloud_visitors" data-flag-title="My blog">
+             <span id="/2017/05/30/polymorphism/" class="leancloud_visitors" data-flag-title="多态C++与Java">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -324,8 +326,133 @@
       
 
       
-        <p><img src="/uploads/5.jpg" alt="pic"></p>
-<hr>
+        <p>最近看多态时，发现C++和Java的多态很多相同之处也有一些区别，就总结了一下。</p>
+<p>多态作为面向对象的三大特性（封装、继承）之一，顾名思义，让程序运行时有多个状态可以运行，函数的调用是在调用时才确定而不是编译器确定的。<br>常用的写法是声明一个父类，实际引用的是子类对象，再调用子类中重写（方法名参数均一致）了的父类的方法。java和C++在这里对于重写了的方法就有一个区别，C++要求是必须重写虚函数才可以实现多态，而Java要求的则只是重写了的方法就可以了。<br>Java没有虚函数的概念，对于一个父类声明，实际引用了子类的对象，它可以调用的方法是父类中的方法，如果某些方法被子类重写，则会调用相应的子类方法（相当于原父方法被替换），而子类自己拥有的，父类中没用的则不允许调用。<br>C++则要稍复杂一点，多态只是针对虚函数而言，普通的函数，即使重写也不会有效果。所以C++可以调用的是父类中的方法，和对应的子类中被重写了的虚函数，子类中重写的普通函数和独有函数，是无法被调用的。<br>    //C++<br>    //小结：1、有virtual才可能发生多态现象<br>    // 2、不发生多态（无virtual）调用就按原类型调用</p>
+<pre><code><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;
+
+<span class="keyword">class</span> Base
+{
+<span class="keyword">public</span>:
+    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">e</span><span class="params">(<span class="keyword">float</span> x)</span>
+    </span>{
+        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Base::e(float)"</span>&lt;&lt; x &lt;&lt;endl;
+    }
+    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">float</span> x)</span>
+    </span>{
+        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Base::f(float)"</span>&lt;&lt; x &lt;&lt;endl;
+    }
+    <span class="function"><span class="keyword">void</span> <span class="title">g</span><span class="params">(<span class="keyword">float</span> x)</span>
+    </span>{
+        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Base::g(float)"</span>&lt;&lt; x &lt;&lt;endl;
+    }
+    <span class="function"><span class="keyword">void</span> <span class="title">h</span><span class="params">(<span class="keyword">float</span> x)</span>
+    </span>{
+        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Base::h(float)"</span>&lt;&lt; x &lt;&lt;endl;
+    }
+};
+<span class="keyword">class</span> Derived : <span class="keyword">public</span> Base
+{
+<span class="keyword">public</span>:
+    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">e</span><span class="params">(<span class="keyword">float</span> x)</span>
+    </span>{
+        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Derived::e(float)"</span>&lt;&lt; x &lt;&lt;endl;    <span class="comment">//多态、覆盖</span>
+    }
+    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> x)</span>
+    </span>{
+        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Derived::f(int)"</span>&lt;&lt; x &lt;&lt;endl;   <span class="comment">//子类独有的方法</span>
+    }
+    <span class="function"><span class="keyword">void</span> <span class="title">g</span><span class="params">(<span class="keyword">int</span> x)</span>
+    </span>{
+        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Derived::g(int)"</span>&lt;&lt; x &lt;&lt;endl;     <span class="comment">//这是子类独有的方法</span>
+    }
+    <span class="function"><span class="keyword">void</span> <span class="title">h</span><span class="params">(<span class="keyword">float</span> x)</span>
+    </span>{
+        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Derived::h(float)"</span>&lt;&lt; x &lt;&lt;endl;   <span class="comment">//子类重写的普通方法</span>
+    }
+};
+<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span>
+</span>{
+    Derived d;
+    Base *pb = &amp;d;
+    Derived *pd = &amp;d;
+    <span class="comment">// 虚函数可以实现多态</span>
+    pb-&gt;e(<span class="number">3.14f</span>);   <span class="comment">// Derived::f(float) 3.14</span>
+    pd-&gt;e(<span class="number">3.14f</span>);   <span class="comment">// Derived::f(float) 3.14</span>
+
+    <span class="comment">// 子类独有的方法</span>
+    pb-&gt;f(<span class="number">3.14f</span>);   <span class="comment">// Base::f(float) 3.14</span>
+    pd-&gt;f(<span class="number">3.14f</span>);   <span class="comment">// Derived::f(int) 3</span>
+
+    <span class="comment">// g这个方法，父类和子类的方法参数不同，所以是两个不同的方法</span>
+    pb-&gt;g(<span class="number">3.14f</span>);   <span class="comment">// Base::g(float)  3.14</span>
+    pd-&gt;g(<span class="number">3.14f</span>);   <span class="comment">// Derived::g(int) 3 </span>
+
+    <span class="comment">// h虽然是被重写了，但是是普通方法，也不能实现多态</span>
+    pb-&gt;h(<span class="number">3.14f</span>);   <span class="comment">// Base::h(float) 3.14</span>
+    pd-&gt;h(<span class="number">3.14f</span>);   <span class="comment">// Derived::h(float) 3.14</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}
+</code></pre><p>Java中实现多态可以有继承和接口两种实现方式。继承可以继承普通类和抽象类，接口则是全部为抽象的方法（没有实现），区别如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">抽象类</th>
+<th style="text-align:center">接口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">默认的方法实现</td>
+<td style="text-align:center">它可以有默认的方法实现</td>
+<td style="text-align:center">接口完全是抽象的。它根本不存在方法的实现</td>
+</tr>
+<tr>
+<td style="text-align:center">实现</td>
+<td style="text-align:center">子类使用extends关键字来继承抽象类。如果子类不是抽象类的话，它需要提供抽象类中所有声明的方法的实现。</td>
+<td style="text-align:center">子类使用关键字implements来实现接口。它需要提供接口中所有声明的方法的实现</td>
+</tr>
+<tr>
+<td style="text-align:center">构造器</td>
+<td style="text-align:center">抽象类可以有构造器</td>
+<td style="text-align:center">接口不能有构造器</td>
+</tr>
+<tr>
+<td style="text-align:center">与正常Java类的区别</td>
+<td style="text-align:center">除了你不能实例化抽象类之外，它和普通Java类没有任何区别</td>
+<td style="text-align:center">接口是完全不同的类型</td>
+</tr>
+<tr>
+<td style="text-align:center">访问修饰符</td>
+<td style="text-align:center">抽象方法可以有public、protected和default这些修饰符</td>
+<td style="text-align:center">接口方法默认修饰符是public。你不可以使用其它修饰符。</td>
+</tr>
+<tr>
+<td style="text-align:center">main方法</td>
+<td style="text-align:center">抽象方法可以有main方法并且我们可以运行它</td>
+<td style="text-align:center">接口没有main方法，因此我们不能运行它。</td>
+</tr>
+<tr>
+<td style="text-align:center">多继承</td>
+<td style="text-align:center">抽象方法可以继承一个类和实现多个接口</td>
+<td style="text-align:center">接口只可以继承一个或多个其它接口</td>
+</tr>
+<tr>
+<td style="text-align:center">速度</td>
+<td style="text-align:center">它比接口速度要快</td>
+<td style="text-align:center">接口是稍微有点慢的，因为它需要时间去寻找在类中实现的方法。</td>
+</tr>
+<tr>
+<td style="text-align:center">添加新方法</td>
+<td style="text-align:center">如果你往抽象类中添加新的方法，你可以给它提供默认的实现。因此你不需要改变你现在的代码。</td>
+<td style="text-align:center">如果你往接口中添加方法，那么你必须改变实现该接口的类。</td>
+</tr>
+</tbody>
+</table>
+<p>C++ 则有虚函数和纯虚函数，其中虚函数，加上关键词virtual，纯虚函数则是函数原型后加上“=0”如virtual ReturnType Function()= 0;包含纯虚函数的类是抽象类（也就是C++中的接口），不可以实现的。</p>
+<p>Java抽象类和接口还有一个区别是设计层面，抽象类是自底向上，将几个类的共性抽象出来，如男人、女人、老人、小孩可以抽象出一个类：人；接口是自顶向下的，包含的是抽象的方法，实现该接口的类不一定是同一个类型，比如对于运动了一段路程，人可以是走了一段路程，动物可以是爬了一段路程，飞行器可以使飞行了一段路程，这里就可以把这个方法作为一个接口里的方法。</p>
+<p>虚函数表<br>虚函数（Virtual Function）是通过一张虚函数表（Virtual Table）来实现的。简称为V-Table。在这个表中，主是要一个类的虚函数的地址表，这张表解决了继承、覆盖的问题，保证其容真实反应实际的函数。对于一个类的实例，如果他继承（单继承）的时候，没有虚函数覆盖（重写override），那么它的虚函数表里的顺序是父类的虚函数在前，再跟着自己的虚函数；如果继承的时候虚函数覆盖了，那么覆盖了的虚函数在被覆盖的父类虚函数之前，其余的顺序依旧。对于多继承无覆盖，那么每个父类都有自己的虚函数表，子类的虚函数在第一个父函数虚函数表后；若是有覆盖，覆盖了的虚函数就在对应的父虚函数表中被覆盖的虚函数之前，没有覆盖的虚函数依然在第一个父类虚函数表的最后。</p>
 
       
     </div>
@@ -334,7 +461,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/photography/" rel="tag">#photography</a>
+            <a href="/tags/Algorithm/" rel="tag">#Algorithm</a>
           
         </div>
       
@@ -343,12 +470,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/05/30/hello-world/" rel="next" title="My blog">
+                <i class="fa fa-chevron-left"></i> My blog
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/16/Chongqing-Chengdu/" rel="prev" title="重庆成都六日游">
-                重庆成都六日游 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/30/eat_better_live_better/" rel="prev" title="入职一周年-谈谈易园附近的吃">
+                入职一周年-谈谈易园附近的吃 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -364,10 +495,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/10/31/hello-world/"
-     data-title="My blog"
+        <div class="ds-share flat" data-thread-key="2017/05/30/polymorphism/"
+     data-title="多态C++与Java"
      data-content=""
-     data-url="http://truilin.com/2015/10/31/hello-world/">
+     data-url="http://truilin.com/2017/05/30/polymorphism/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -394,8 +525,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/10/31/hello-world/"
-           data-title="My blog" data-url="http://truilin.com/2015/10/31/hello-world/">
+      <div class="ds-thread" data-thread-key="2017/05/30/polymorphism/"
+           data-title="多态C++与Java" data-url="http://truilin.com/2017/05/30/polymorphism/">
       </div>
     
   </div>
@@ -440,7 +571,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -454,7 +585,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
