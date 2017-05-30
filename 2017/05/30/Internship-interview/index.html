@@ -1,0 +1,984 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Truilin" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.0" />
+
+
+
+
+
+
+<meta name="description" content="微软微软对代码能力要求高（一言不合写代码，leetcode hard级）
+1.1、存有n个质数的数组，求以这些质数作为因子构成的第n大的数1.2、八皇后
+2.1、二叉树逆序层序遍历2.2、链表局部反转2.3、设计map
+3.1、文件的append操作，如果操作对象是char则append是原子操作，如果是string则并不是一个原子操作，假设写到一半的时候，电脑崩溃了。如何操作使得append一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="校招实习面试集锦">
+<meta property="og:url" content="http://truilin.com/2017/05/30/Internship-interview/index.html">
+<meta property="og:site_name" content="Truilin Blog">
+<meta property="og:description" content="微软微软对代码能力要求高（一言不合写代码，leetcode hard级）
+1.1、存有n个质数的数组，求以这些质数作为因子构成的第n大的数1.2、八皇后
+2.1、二叉树逆序层序遍历2.2、链表局部反转2.3、设计map
+3.1、文件的append操作，如果操作对象是char则append是原子操作，如果是string则并不是一个原子操作，假设写到一半的时候，电脑崩溃了。如何操作使得append一个">
+<meta property="og:updated_time" content="2016-07-23T01:48:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="校招实习面试集锦">
+<meta name="twitter:description" content="微软微软对代码能力要求高（一言不合写代码，leetcode hard级）
+1.1、存有n个质数的数组，求以这些质数作为因子构成的第n大的数1.2、八皇后
+2.1、二叉树逆序层序遍历2.2、链表局部反转2.3、设计map
+3.1、文件的append操作，如果操作对象是char则append是原子操作，如果是string则并不是一个原子操作，假设写到一半的时候，电脑崩溃了。如何操作使得append一个">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: '[object Object]',
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 校招实习面试集锦 | Truilin Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '69512195-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?e51f21f82c22c09fd57b506880d6fba0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Truilin Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+      
+        <li class="menu-item menu-item-search">
+          <a href="#" class="st-search-show-outputs">
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '7t8-R-muj468vAKLDmgo','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                校招实习面试集锦
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-05-30T17:56:36+08:00" content="2017-05-30">
+              2017-05-30
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/30/Internship-interview/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/30/Internship-interview/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/05/30/Internship-interview/" class="leancloud_visitors" data-flag-title="校招实习面试集锦">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="微软">微软</h1><p>微软对代码能力要求高（一言不合写代码，leetcode hard级）</p>
+<p>1.1、存有n个质数的数组，求以这些质数作为因子构成的第n大的数<br>1.2、八皇后</p>
+<p>2.1、二叉树逆序层序遍历<br>2.2、链表局部反转<br>2.3、设计map</p>
+<p>3.1、文件的append操作，如果操作对象是char则append是原子操作，如果是string则并不是一个原子操作，假设写到一半的时候，电脑崩溃了。如何操作使得append一个string是原子操作。</p>
+<p>4.1、一个可能有环的链表，删除其中所有val等于给定target的节点</p>
+<p>5.1、链表反转，链表局部反转、链表k-group反转</p>
+<h1 id="阿里">阿里</h1><p>1.1、10亿个url，找到出现次数最多的top k个url（单机，不排序）<br>1.2、对于一个搜索引擎，你搜索的query，引擎会提示给你一些，想出一个完整的方案，去处理下拉推荐（排序啊什么的）。<br>1.3、求一个字符串中第一个出现3次的字符。<br>1.4、输入“I am a student.”，则输出“student. a am I”。<br>1.5、说说贝叶斯分类和LR的区别，还有LR效果不好怎么优化？<br>1.6、特征为什么要离散化<br>1.7、选个NLP方向随便讲讲<br>1.8、信息熵，怎么计算，为什么？</p>
+<p>2.1、一堆文档，类似于“香蕉苹果八宝粥”，识别词性<br>2.2、LR多分类机制（源码细节）</p>
+<h1 id="因特尔">因特尔</h1><p>1.1、100个排好序的文件，外排（我觉得想考败者树）<br>1.2、一个有序数组，一个target，问有数组里多少对，它们的和恰为target。eg.(2,2,7,7),9,一共有四组，index不同即为一组<br>1.3、bitmap的应用<br>1.4、两个字符串，将在第二个字符串中出现过的字符，全部在第一个字符串中删掉再返回第一个字符串。（考察断链）<br>1.5、序列化协议，假设一个结构体组成为{long，int，char*a}，如何制定一个协议，使得用户可以正确的解析出一串该结构体。</p>
+<h1 id="网易游戏">网易游戏</h1><p>1.1、n个数找出前k个最大的数<br>1.2、100亿（10^11）个11位的QQ号（10^12-1）怎么存储在64台/10台/10台以下的机器上<br>1.3、100万个数，找出出现次数最多的数<br>（摩根和网易都有问到上海地铁设计的问题，有兴趣的同学可以自己去搜搜看看）</p>
+<p>2.1、static在何种情况下使用<br>2.2、C++多态的实现<br>2.3、如何判断C++一个类的大小<br>2.4、TCP和UDP的区别<br>2.5、循环数组求第k的数的大小？12345678-&gt;56781234即为循环数组<br>2.6、给定两个数组，如何判断A、B是包含关系<br>2.7、判断n是不是2的幂次方</p>
+<p>3.1、三个发射器，每个发射器可以发射a-z中的一个字母，每个发射器一共可以发射26次。现每次随机挑选一个发射器发射，当有一个发射器全部发射完即停止，问一共有多少种发射可能顺序？<br>3.2、扑克牌，见腾讯6.1<br>3.3两个水杯，容量不一样，让你倒出给定大小的水（网上类似题目较多）<br>3.4、非递归实现快排<br>3.5、估算一个游戏的登陆人数（多开开脑洞）</p>
+<h1 id="摩根">摩根</h1><p>（摩根一轮是电话面，有同学说一共六轮，也有同学再有一轮on site就可以了）<br>1.1、给定数组，找出和等于给定数s的两个数a，b（leetcode原题，还有一个蛮有意思题的是找出所有的三个数，他们的和等于0）<br>1.2、给100GB的Interger排序（面试者说没太听懂）<br>1.3、将一个集合s分成两块a、b，使得sum(a)和sum(b)之间的差最小<br>1.4、1-n，共n+1个数，只有一个数是重复的，找出这个数（不是排序）</p>
+<p>2.1、判断两颗二叉查找树是否一致<br>2.2、有序数组去重（O(1)空间O(n)时间）<br>2.3、设计一个停车场（画一下类图，每个类的属性，写一下各个类的实现和函数例如停车场，停车位，收费等）</p>
+<p>3.1、一个str拆开，长度为偶数则对半拆（如10-&gt;5,5），奇数则中间为1，另外对半拆（11-&gt;5,1,5），这样不停的拆下去，一共拆n次后，返回每个子串逆序后再合并的结果<br>3.2、栈实现队列<br>3.3、C++虚函数、虚表<br>3.4、实现map</p>
+<h1 id="百度">百度</h1><p>1.1、给定一个无序数组，找出其中一个数，使得它至少大于其余60%的数<br>1.2、给出一个url，找到其中的网址，该url可能含有https这些前缀，也有可能含有一些子网页路径<br>1.3、给定一个数组，找到最大和的子序列（加强版，限定子序列的长度至少大于L）<br>1.4、一个单机，内存一个G，两个极大的文件各100G，找出两个文件中的相似行</p>
+<p>2.1、str转int函数，考虑异常字符情况<br>2.2、合并两个有序链表，给定两个指针和链表的长度（不要破坏原来的两个指针结构）<br>2.3、给一个网站的访问日志，找到访问这个网站最多的k个用户（mapreduce，我说的是在reduce阶段保存一个map，存储前k个用户，然后又问我，如果k特别大怎么办？而且你这个map每次都遍历怎么办） 话说top k真是必考题<br>2.4、如果组织一堆电话号码，使得给定一个前缀后，可以快速找到具有该前缀的号码（我说的是树结构，每个节点就是一个号码数字，从根节点到叶节点就是一个号码，然后面试官又问空间复杂度了）</p>
+<p>3.1、一个无序数组，定义差为后面的元素减去前面的元素（不一定相邻），找到这个最大差<br>3.2、两台电脑各有一个16T的大文件，两台电脑之间的带宽非常小，其中一个文件连续10B的字节已损坏，利用另一台电脑上的完好文件来修复该损坏文件。<br>3.3、如何优化快排，比较各排序算法<br>3.4、写出二叉排序树非递归遍历，在此基础上，翻转该二叉树，得到镜像二叉树<br>3.5、hashtable的线程安全如何实现的？锁是怎么加的？<br>3.6、hashmap哪些操作是不安全的？（对于put一个新元素时的确是不安全的，如果两个线程同时put，最后get的时候会死循环，面试官说的，然而我并不懂）<br>3.7、jvm、gc<br>3.8、线程、进程，有这两个点展开，把你所会的操作系统讲讲<br>3.9、tcp、udp，讲讲计算机网络<br>3.10、单例模式的五种写法，各自优劣</p>
+<h1 id="谷歌">谷歌</h1><p>1.1、给定两个set，去重<br>1.2、给定两个函数，一个是f(n) = 3*n+1,一个是f(n)=n/2，如果是奇数使用第一个函数，偶数使用第二个函数，给定一个数，对该数不停地使用上述两个函数，直到最后为1。现给你一个数组，求整个数组最后都变为1时的所花费的时间</p>
+<h1 id="腾讯">腾讯</h1><p>（C++）<br>1.1、给定两个链表，判断是否有共同后缀<br>1.2、判断一个链表是否有环<br>1.3、手写memcpy和快排<br>1.4、用O(1)时间复杂度在2G的内存里查找2亿个qq号<br>1.5、static和const性质<br>1.6、拷贝构造函数和赋值构造函数的区别<br>1.7、vector和list的区别</p>
+<p>2.1、一个多叉树，记录根节点到叶节点之和为sum的路径（该题也曾出现在谷歌的面试中）</p>
+<p>3.1、写一个函数，翻转英文句子。例如“I am on duty today”，处理之后为“today duty on am I”。函数原型为void a(char* pStr,int iLen),其中pStr是输入输出参数，iLen为字符串长度<br>3.2、请写一个二叉排序树，并实现按层次遍历输出<br>3.3、C编码，找出满足下面两个条件的元素，要求时间复杂度尽量小<br>a)它前面的元素都比它小<br>b)它后面的元素都比它大<br>3.4、设计一个算法，找出二叉树上任意两个节点最近的公共父节点，空间复杂度最大值允许为树的深度，时间复杂度要求小于O(n^2)，每个节点不存在指向父节点的指针</p>
+<p>4.1、海量大数据，找出前k个最小的元素（快排、位向量等方法均被否决）<br>4.2、给定固定内存空间，实现两个栈<br>4.3、为什么电影里，车子向前驶，而我们看到的轮子却好像逆时针旋转一样（这个问题也困扰了我好久好久啊啊啊啊）</p>
+<p>5.1、单链表合并<br>5.2、25匹马找出最快三匹<br>5.3、top k问题，一般情况和mapreduce情况<br>5.4、不知道行数的情况随机选取文件一百行<br>5.5、推荐系统的多样性</p>
+<p>6.1、给一个瞎子52张扑克牌,并告诉他里面恰好有10张牌是正面朝上的.要求这个瞎子把牌分成两堆,使得每堆牌里正面朝上的牌的张数一样多.<br>6.2、全国任意6个人中，必有3个人互相认识或有3个人互相都不认识，为什么？</p>
+<p>7.1、怎么实现连连看两个点是不是能消除<br>7.2、买火车票怎么查出余票，5000个车，10站，站之间可以互达<br>7.3、百度搜索时所用到的所有技术</p>
+<h1 id="微信">微信</h1><p>1.1、判断正整数是否是对称数，如3，123,121,12321。不能把整数转为字符串来判断。<br>1.2、给定一个递增循环整数数组，从里面找出最小的元素，使用的算法越快越好。特别地，最小的元素可能出现在数组中间。比如：50, 52, 63, 90, 3, 8, 15, 44。<br>1.3、给定一个单向链表，请给出从最后节点倒数第n个节点。例如，｛1, 2, 3, 4, 5, 6｝，倒数第3个节点为｛4｝。<br>1.4、在二叉排序树上面找出第3大的节点。注意：不能把二叉树全量存储到另外的存储空间，比如存储到数组中，然后取出数组的第三个元素。<br>1.5、给定两个字符串 s1 和 s2 ，从 s1 中删除在 s2 中出现过的字符。<br>1.6、在机场中，你想从A点前往B点。（为了将问题简化，假设机场是一条线性通道。）一些区域有电动扶梯（双向的），另一些区域没有。你的步行速度恒定为v，电动扶梯的运行速度为u，因此在扶梯上，你的实际速度为v+u。（显然，你不会搭乘与你前进方向不一致的扶梯。）你的目标是尽可能快地从A点到达B点。<br>1) 假定你需要暂停片刻，比如系鞋带。请问你应该在电动扶梯上系，还是在没有上电动扶梯时系？假定两种情况下，系鞋带的时间相同。<br>2) 假定你有有限数量的多余能量，用来奔跑。在跑动时，你的速度提高到v’（如果在电动扶梯上，就相应为v’+u）。请问你应该在电动扶梯上跑，还是在没有上电动扶梯时跑？假定两种情况下，你可供奔跑的能量相同。<br>【用数学方式证明】</p>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/27/Graduation-travel/" rel="next" title="五省九天十夜-我一个人的毕业旅行">
+                <i class="fa fa-chevron-left"></i> 五省九天十夜-我一个人的毕业旅行
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2017/05/30/Internship-interview/"
+     data-title="校招实习面试集锦"
+     data-content=""
+     data-url="http://truilin.com/2017/05/30/Internship-interview/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/05/30/Internship-interview/"
+           data-title="校招实习面试集锦" data-url="http://truilin.com/2017/05/30/Internship-interview/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="Truilin" />
+          <p class="site-author-name" itemprop="name">Truilin</p>
+          <p class="site-description motion-element" itemprop="description">土硕，吃得多做的少还很水的那种</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Truilin" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/Truilin" target="_blank">
+                  
+                    <i class="fa fa-twitter"></i> Twitter
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/Truilin" target="_blank">
+                  
+                    <i class="fa fa-FB"></i> FB
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.linkedin.com/pub/%E7%91%9E%E6%9E%97-%E9%99%B6/95/5b1/973" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Link
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/Ruilin_Tao" target="_blank">
+                  
+                    <i class="fa fa-zhihu"></i> zhihu
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#微软"><span class="nav-number">1.</span> <span class="nav-text">微软</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阿里"><span class="nav-number">2.</span> <span class="nav-text">阿里</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#因特尔"><span class="nav-number">3.</span> <span class="nav-text">因特尔</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网易游戏"><span class="nav-number">4.</span> <span class="nav-text">网易游戏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#摩根"><span class="nav-number">5.</span> <span class="nav-text">摩根</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#百度"><span class="nav-number">6.</span> <span class="nav-text">百度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#谷歌"><span class="nav-number">7.</span> <span class="nav-text">谷歌</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#腾讯"><span class="nav-number">8.</span> <span class="nav-text">腾讯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微信"><span class="nav-number">9.</span> <span class="nav-text">微信</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Truilin</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  
+
+
+  
+
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.0"></script>
+
+
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"Truilin"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
+  
+
+
+  
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("rUiXUY0Ep7cRf8eDWUw7YJcR-gzGzoHsz", "eksbTQDY7Ksf6R5UGQ43Pnjq");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+
+</body>
+</html>

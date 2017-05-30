@@ -1,0 +1,1036 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Truilin" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.0" />
+
+
+
+
+
+
+<meta name="description" content="校招开始了，一些面试题目和大家共享一下，欢迎大家探讨一些题目的解法（对比了之前的校招实习面试题，是有一些常考题的，建议那一篇博客也看看）
+腾讯话说鹅厂真的很喜欢出智力题啊
+
+1.1、sizeof空的类，虚函数表  C++标准规定类的大小不为0，空类的大小为1，当类不包含虚函数和非静态数据成员时，其对象大小也为1。（额外给个思考题，为什么空类大小是1？）  关于虚函数，陈皓的这篇博客讲的不错
+1.2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="校招面试集锦">
+<meta property="og:url" content="http://truilin.com/2016/07/23/school-recruit-interview/index.html">
+<meta property="og:site_name" content="Truilin Blog">
+<meta property="og:description" content="校招开始了，一些面试题目和大家共享一下，欢迎大家探讨一些题目的解法（对比了之前的校招实习面试题，是有一些常考题的，建议那一篇博客也看看）
+腾讯话说鹅厂真的很喜欢出智力题啊
+
+1.1、sizeof空的类，虚函数表  C++标准规定类的大小不为0，空类的大小为1，当类不包含虚函数和非静态数据成员时，其对象大小也为1。（额外给个思考题，为什么空类大小是1？）  关于虚函数，陈皓的这篇博客讲的不错
+1.2">
+<meta property="og:image" content="http://truilin.com/images/process_addr.jpeg">
+<meta property="og:updated_time" content="2016-09-20T13:36:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="校招面试集锦">
+<meta name="twitter:description" content="校招开始了，一些面试题目和大家共享一下，欢迎大家探讨一些题目的解法（对比了之前的校招实习面试题，是有一些常考题的，建议那一篇博客也看看）
+腾讯话说鹅厂真的很喜欢出智力题啊
+
+1.1、sizeof空的类，虚函数表  C++标准规定类的大小不为0，空类的大小为1，当类不包含虚函数和非静态数据成员时，其对象大小也为1。（额外给个思考题，为什么空类大小是1？）  关于虚函数，陈皓的这篇博客讲的不错
+1.2">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: '[object Object]',
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 校招面试集锦 | Truilin Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '69512195-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?e51f21f82c22c09fd57b506880d6fba0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Truilin Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+      
+        <li class="menu-item menu-item-search">
+          <a href="#" class="st-search-show-outputs">
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '7t8-R-muj468vAKLDmgo','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                校招面试集锦
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-23T09:50:53+08:00" content="2016-07-23">
+              2016-07-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/23/school-recruit-interview/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/23/school-recruit-interview/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/23/school-recruit-interview/" class="leancloud_visitors" data-flag-title="校招面试集锦">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>校招开始了，一些面试题目和大家共享一下，欢迎大家探讨一些题目的解法<br>（对比了之前的校招实习面试题，是有一些常考题的，建议那一篇博客也看看）</p>
+<h1 id="腾讯">腾讯</h1><p>话说鹅厂真的很喜欢出智力题啊</p>
+<ul>
+<li>1.1、sizeof空的类，虚函数表<br>  C++标准规定类的大小不为0，空类的大小为1，当类不包含虚函数和非静态数据成员时，其对象大小也为1。（额外给个思考题，为什么空类大小是1？）<br>  关于虚函数，<a href="http://blog.csdn.net/haoel/article/details/1948051/" target="_blank" rel="external">陈皓的这篇博客讲的不错</a></li>
+<li>1.2、100个硬币，有一个质量异常，给你一个天枰，你最少称几次可以知道这个硬币偏重还是偏轻？<br>  先分成两堆，称一次，再随机选一堆分成两堆再称一次即可。</li>
+<li>1.3、进程间通信的方法<br>  这个问题我也碰到过很多次，感觉面试官非常想要的一个答案是socket通信，此外还有管道，消息队列，信号量，共享内存。（线程间通信也是较常问的一个问题）</li>
+<li>1.4、linux命令，两个存电话号码的文件，找出两个文件都有的号码<br>  common，可以参考一下这篇<a href="http://blog.csdn.net/tianmohust/article/details/6997924" target="_blank" rel="external">博客</a></li>
+<li><p>1.5、linux命令，有个文件一直在增大，找到在写这个文件的进程<br>  lsof <a href="http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/lsof.html" target="_blank" rel="external">lsof 一切皆文件</a></p>
+</li>
+<li><p>2.1、linux有哪些IPC，分别叙述他们的特点以及应用场景<br>  管道（Pipe）及有名管道（named pipe）：管道可用于具有亲缘关系进程间的通信，有名管道克服了管道没有名字的限制，因此，除具有管道所具有的功能外，它还允许无亲缘关系进程间的通信；<br>  信号（Signal）：信号是比较复杂的通信方式，用于通知接受进程有某种事件发生，除了用于进程间通信外，进程还可以发送信号给进程本身；linux除了支持Unix早期信号语义函数sigal外，<br>  报文（Message）队列（消息队列）：消息队列是消息的链接表，包括Posix消息队列system V消息队列。有足够权限的进程可以向队列中添加消息，被赋予读权限的进程则可以读走队列中的消息。消息队列克服了信号承载信息量少，管道只能承载无格式字节流以及缓冲区大小受限等缺点。<br>  共享内存：使得多个进程可以访问同一块内存空间，是最快的可用IPC形式。是针对其他通信机制运行效率较低而设计的。往往与其它通信机制，如信号量结合使用，来达到进程间的同步及互斥。<br>  信号量（semaphore）：主要作为进程间以及同一进程不同线程之间的同步手段。<br>  套接口（Socket）：更为一般的进程间通信机制，可用于不同机器之间的进程间通信。</p>
+</li>
+<li>2.2、编程中使用过哪些锁，他们的特点和使用场景<br>  <a href="http://blog.163.com/huangguoqiang_123@126/blog/static/14104311420125289822440" target="_blank" rel="external">线程同步（互斥量、条件变量、信号量、自旋锁、读写锁）</a><br>  <a href="http://hedengcheng.com/?p=803" target="_blank" rel="external">并发编程系列之一：锁的意义</a></li>
+<li>2.3、程序分为几个区，分别存放什么<br>  BSS段：BSS段（bss segment）通常是指用来存放程序中未初始化的全局变量的一块内存区域。BSS是英文Block Started by Symbol的简称。BSS段属于静态内存分配。<br>  数据段：数据段（data segment）通常是指用来存放程序中已初始化的全局变量的一块内存区域。数据段属于静态内存分配。<br>  代码段：代码段（code segment/text segment）通常是指用来存放程序执行代码的一块内存区域。这部分区域的大小在程序运行前就已经确定，并且内存区域通常属于只读, 某些架构也允许代码段为可写，即允许修改程序。在代码段中，也有可能包含一些只读的常数变量，例如字符串常量等。<br>  堆（heap）：堆是用于存放进程运行中被动态分配的内存段，它的大小并不固定，可动态扩张或缩减。当进程调用malloc等函数分配内存时，新分配的内存就被动态添加到堆上（堆被扩张）；当利用free等函数释放内存时，被释放的内存从堆中被剔除（堆被缩减）<br>  栈(stack)：栈又称堆栈， 是用户存放程序临时创建的局部变量，也就是说我们函数括弧“{}”中定义的变量（但不包括static声明的变量，static意味着在数据段中存放变量）。除此以外，在函数被调用时，其参数也会被压入发起调用的进程栈中，并且待到调用结束后，函数的返回值也会被存放回栈中。由于栈的先进后出特点，所以栈特别方便用来保存/恢复调用现场。从这个意义上讲，我们可以把堆栈看成一个寄存、交换临时数据的内存区。它是由操作系统分配的，内存的申请与回收都由OS管理。<br>  <img src="/images/process_addr.jpeg" alt="img"></li>
+<li>2.4、设计一个处理十万并发的服务器</li>
+<li>2.5、系统pthread库的读写锁排个队大概多长时间</li>
+<li><p>2.6、说说分布式协议<br>（这是基础架构部们的面试）</p>
+</li>
+<li><p>3.1、问在网易做的什么，cocostudio貌似他有点兴趣。后来还问了下一步的python和qt的东西。</p>
+</li>
+<li>3.2、然后问学校的碰撞检测的东西。</li>
+<li>3.3、那个学校的模型检测的东西。</li>
+<li>3.4、问了虚函数的原理，就是虚表那个。<br>  见1.1</li>
+<li>3.5、问了为什么析构函数要是虚函数。<br>  析构函数调用顺序应该是先调用派生类的析构函数，再调用基类的析构函数。如果基类析构函数是普通函数，那么派生类的析构函数不会被调用。把基类的析构函数声明为虚函数。这将使所有派生类的析构函数自动成为虚函数。（为什么构造函数不能是虚函数？）</li>
+<li>3.6、 问了排序算法哪几个，都有什么样的复杂度。<br>  几个常见的排序算法都应该熟记于心，快排是白板写算法第一常考题，但是其余几个最好也能手写，曾有同学写$n^2$记错了算法。<a href="http://blog.csdn.net/hguisu/article/details/7776068" target="_blank" rel="external">八大排序算法</a></li>
+<li>3.7、 问vs吗，都有哪些调试手段？为什么断点会停。断点机制如何实现的。什么是数据断点。<br>  <a href="https://msdn.microsoft.com/zh-cn/library/5557y8b4.aspx" target="_blank" rel="external">使用断点</a><br>  <a href="http://blog.chinaunix.net/uid-27767798-id-3483807.html" target="_blank" rel="external">调试断点原理</a></li>
+<li>3.8、 unicode和utf-8，ascii之类的差别。<br>  看阮一峰的博客<a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank" rel="external">字符编码笔记：ASCII，Unicode和UTF-8</a></li>
+<li>3.9、 问设计模式，所说有哪些，是什么样的原理。<br>  <a href="http://www.runoob.com/design-pattern/design-pattern-tutorial.html" target="_blank" rel="external">设计模式</a> 最常考的是单例模式，好几种写法</li>
+<li>3.10、 c的memcopy和strcopy的差别，为什么memcopy会快。<br>  <a href="http://www.360doc.com/content/12/0731/11/9688385_227424314.shtml" target="_blank" rel="external">memcpy和strcpy的区别</a> memcopy会快可能的原因是做了优化，四个字节一起拷贝而不是一个字节拷贝（注意重叠内存）</li>
+<li>3.11、 有哪些内存泄漏的检测方法。<br>  <a href="http://www.cnblogs.com/skynet/archive/2011/02/20/1959162.html" target="_blank" rel="external">C/C++内存泄漏及检测</a> （这里还可以引申出来问问malloc/free和new/delete等等）</li>
+<li><p>3.12、 深浅拷贝区别（位拷贝，值拷贝）<br>  主要就是指针指向的内存是不是同一个地方。深拷贝的时候连指针指向的内存也重新拷贝了一份<br>（这是的IEG）</p>
+</li>
+<li><p>4.1、 结构体和共同体的区别。<br>  结构体struct，共同体union，前者每个数据成员有自己的内存空间，后者共用内存空间（由最大的数据成员决定）；对于union的不同成员赋值, 将会对其它成员重写, 原来成员的值就不存在了, 而对于struct的不同成员赋值是互不影响的。</p>
+</li>
+<li>4.2、 static 和const分别怎么用，类里面static和const可以同时修饰成员函数吗。<br>  二者不可以同时修饰成员函数</li>
+<li><p>4.3、 指针和引用的区别，引用可以用常指针实现吗。</p>
+</li>
+<li><p>4.4、 什么是多态，多态有什么用途。</p>
+</li>
+<li><p>4.5、 各个排序算法的时间复杂度和稳定性，快排的原理。</p>
+</li>
+<li>4.6、 vector中size()和capacity()的区别。<br>  size指的是容器中元素的个数，capacity指的是容器大小。</li>
+<li>4.7、 map和set的原理。<br>  红黑树</li>
+<li>4.8、 tcp为什么要三次握手，tcp为什么可靠。<br>  建立链接至少两次，但两次丢包会有风险。可靠是因为校验机制，丢包重传等。</li>
+<li>4.9、 函数调用和系统调用的区别。<br>  函数调用是自己调用其他函数，系统调用是系统提供给用户的API接口访问磁盘等。</li>
+<li>4.10、 线程和进程，线程可以共享进程里的哪些东西。 知道协程是什么吗<br>  线程共享内存。协程是单进程单线程实现的，自己决定什么时候“中断”，</li>
+<li>4.11、 mysql的数据库引擎有哪些，他们的区别。</li>
+<li>4.12、 智力题。。100本书，你和小明轮流拿，一次可以拿1到5本，你先拿，怎样保证最后一本书是你拿走的。</li>
+<li>4.13、 说一下redis，redis的架构懂吗</li>
+<li><p>4.14、 会写makefile吗，一个文件依赖库a，库a依赖库b，写makefile的时候，a要放在b的前面还是后面。</p>
+</li>
+<li><p>5.1、 一天中时针分针相遇几次？<br>  22次</p>
+</li>
+<li>5.2、 一个房间有一群人都戴白色或黑色的帽子，至少有一个人是黑色的，一个人只能看到别人的帽子颜色而看不到自己的，如果他觉得自己是黑帽子，就打自己一下。第一次亮灯没人打，第二次没人打，第三次有人打，问有几个黑帽子<br>  3个</li>
+</ul>
+<h1 id="百度">百度</h1><p>百度对代码的要求高，在线编程bug-free，建议刷外leetcode再说</p>
+<ul>
+<li>1.1、 反转单链表<br>  <a href="https://leetcode.com/problems/reverse-string/" target="_blank" rel="external">Reverse String</a> （还有一个string句子反转题目，空格跳过，每个单词反转，这个题目就是要注意一下，如果要保证连续几个空格也要保证保留下来）</li>
+<li>1.2、 计算器（加减乘除和括号）<br>  <a href="https://leetcode.com/problems/basic-calculator/" target="_blank" rel="external">Basic Calculator</a></li>
+<li>1.3、 矩阵左上角到右下角的最小路径（每个点有两个移动方向和有四个移动方向，题目是不一样的）<br>  leetcode这道题是每个点两个移动方向的<a href="https://leetcode.com/problems/minimum-path-sum/" target="_blank" rel="external">Minimum Path Sum</a></li>
+</ul>
+<h1 id="阿里">阿里</h1><ul>
+<li>1.1、 判断给定的字符串是不是一个ip地址<br>  给定的字符串看有没有包含小数点分隔符，或者类似于这种<a href="https://leetcode.com/problems/restore-ip-addresses/" target="_blank" rel="external">Restore IP Addresses</a></li>
+<li><p>1.2、 给两个字符串，返回s1中出现并且没有在s2中出现的字符，并且按出现次数排序<br>  哈希，再排序</p>
+</li>
+<li><p>2.1、 java的hashmap和hashtable的区别<br>  <a href="http://www.360doc.com/content/11/0305/23/3477798_98505230.shtml" target="_blank" rel="external">Java中hashmap和hashtable的区别</a>有时候还会把<a href="http://www.iteye.com/topic/344876" target="_blank" rel="external">ConcurrentHashMap</a>拿出来三个一起对比。<br>  关于hashmap有时候还会问到哪些操作是线程不安全的？</p>
+</li>
+<li>2.2、 http和https<br>  <a href="http://www.cnblogs.com/ok-lanyan/archive/2012/07/14/2591204.html" target="_blank" rel="external"> HTTP和HTTPS详解</a></li>
+<li>2.3、 shell怎么给一个文件去重排序<br>  sort [file]|uniq 或者 sort -u [file]</li>
+<li>2.4、 k个最大值<br>  <a href="http://blog.csdn.net/v_JULY_v/article/details/6279498" target="_blank" rel="external">十道海量数据处理面试题与十个方法大总结</a></li>
+</ul>
+<h1 id="Reference">Reference</h1><p><a href="http://www.cnblogs.com/zhguang/p/3257367.html" target="_blank" rel="external">Java 内存区域和GC机制</a><br><a href="http://www.cnblogs.com/chenssy/category/525010.html" target="_blank" rel="external">【java开发】—java提高篇</a><br><a href="http://club.alibabatech.org/article_detail.htm?articleId=52" target="_blank" rel="external">淘宝搜索中Query下拉推荐技术</a><br><a href="http://www.cnblogs.com/dolphin0520/archive/2011/08/25/2153720.html" target="_blank" rel="external">二叉树的非递归遍历</a><br><a href="http://www.runoob.com/design-pattern/singleton-pattern.html" target="_blank" rel="external">单例模式</a><br><a href="http://blog.csdn.net/ljinddlj/article/details/2495209" target="_blank" rel="external">static关键字用法总结</a><br><a href="http://blog.csdn.net/twlkyao/article/details/9104537" target="_blank" rel="external">C++类四个默认函数—构造函数、析构函数、拷贝函数、赋值函数</a><br><a href="http://www.cnblogs.com/smiler/p/4457622.html" target="_blank" rel="external">c++ list, vector, map, set 区别与用法比较</a><br><a href="http://blog.csdn.net/eric_jo/article/details/4138548" target="_blank" rel="external">关于C++ const 的全面总结</a><br><a href="http://sumnous.github.io/blog/2014/06/08/interview_sumnous/" target="_blank" rel="external">面经</a><br><a href="http://icyfenix.iteye.com/blog/715301" target="_blank" rel="external">一个面试官对面试问题的分析</a><br><a href="http://www.cnblogs.com/tornadomeet/p/3395593.html" target="_blank" rel="external">机器学习&amp;数据挖掘笔记_16（常见面试之机器学习算法思想简单梳理）</a><br><a href="http://kubicode.me/2015/08/16/Machine%20Learning/Common-Interview/" target="_blank" rel="external">机器学习常见面试题整理</a><br><a href="http://blog.csdn.net/Hackbuteer1/article/category/899947/1" target="_blank" rel="external">面经集锦</a><br><a href="https://github.com/xuelangZF/CS_Offer" target="_blank" rel="external">深入理解计算机面试中的经典题目！</a><br><a href="http://zheming.wang/blog/2015/05/09/6C1B32E8-BC5F-4D31-AF20-B5DB048B46C3/" target="_blank" rel="external">Hadoop常见问题解决方案总结</a></p>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/23/机器学习-周志华/" rel="next" title="机器学习课后题">
+                <i class="fa fa-chevron-left"></i> 机器学习课后题
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/09/renting-a-house/" rel="prev" title="租房小结">
+                租房小结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/07/23/school-recruit-interview/"
+     data-title="校招面试集锦"
+     data-content=""
+     data-url="http://truilin.com/2016/07/23/school-recruit-interview/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/23/school-recruit-interview/"
+           data-title="校招面试集锦" data-url="http://truilin.com/2016/07/23/school-recruit-interview/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="Truilin" />
+          <p class="site-author-name" itemprop="name">Truilin</p>
+          <p class="site-description motion-element" itemprop="description">土硕，吃得多做的少还很水的那种</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Truilin" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/Truilin" target="_blank">
+                  
+                    <i class="fa fa-twitter"></i> Twitter
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/Truilin" target="_blank">
+                  
+                    <i class="fa fa-FB"></i> FB
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.linkedin.com/pub/%E7%91%9E%E6%9E%97-%E9%99%B6/95/5b1/973" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Link
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/Ruilin_Tao" target="_blank">
+                  
+                    <i class="fa fa-zhihu"></i> zhihu
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#腾讯"><span class="nav-number">1.</span> <span class="nav-text">腾讯</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#百度"><span class="nav-number">2.</span> <span class="nav-text">百度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阿里"><span class="nav-number">3.</span> <span class="nav-text">阿里</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Truilin</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  
+
+
+  
+
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.0"></script>
+
+
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"Truilin"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
+  
+
+
+  
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("rUiXUY0Ep7cRf8eDWUw7YJcR-gzGzoHsz", "eksbTQDY7Ksf6R5UGQ43Pnjq");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+
+</body>
+</html>
